@@ -26,8 +26,8 @@ nav{
     position: fixed;
     top:0px;
     left: 0px;
-    width:100%;
-    height:42px;
+    /*width:100%;
+    height:42px;*/
     display:inline;
 }
 
@@ -151,7 +151,7 @@ form{
   position:relative;
   height:90vh;
   bottom:22px;
-  background-image: url('Images/printer.jpg');
+  background-image: url('../img/printer.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   margin:.3em;
@@ -178,7 +178,7 @@ section  img{
   position:relative;
   height:135vh;
   bottom:22px;
-  background-image: url('Images/back.jpg');
+  /*background-image: url('Images/back.jpg');*/
   background-repeat: no-repeat;
   background-size: cover;
   margin:1.7em;
@@ -191,7 +191,7 @@ section  img{
   position:relative;
   height:100vh;
   width:68%;
-  background-image: url('Images/city.jpg');
+  /*background-image: url('Images/city.jpg');*/
   background-repeat: no-repeat;
   background-size: cover;
   margin:1.7em;

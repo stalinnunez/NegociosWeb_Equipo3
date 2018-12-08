@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
-    <link rel="stylesheet" href="css/Base.css">
+    <link rel="stylesheet" href="public/css/Base.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>	
@@ -34,7 +34,7 @@
 
 	</main>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script type="text/Javascript" src="Base.js"></script> 
+	<script type="text/Javascript" src="public/js/Base.js"></script> 
 
 
 </body>

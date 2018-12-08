@@ -7,7 +7,7 @@
     if (mw_estaLogueado()){
       renderizar("Inicio",array(),"loggedLayout.view.tpl");
     }else{
-      renderizar("Inicio",array());
+      renderizar("Inicio",array(),"Inicio.view.tpl");
     }
   }
 
