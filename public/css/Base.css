@@ -1,0 +1,328 @@
+
+body{
+  font-family: 'Philosopher', sans-serif;
+  background-color: black;
+  margin:0;
+  padding:0;
+}
+
+header{
+  font-family: 'Merriweather', serif;
+  font-size:.9em;
+  padding:0em 0.5em 0.3em 0.5em;
+  background-color: rgba(33, 97, 140, 1);
+  width: 96.2%;
+  position:relative;
+  top:40px;
+  display:inline-block;
+}
+
+h1 , h2, h3{
+  display:inline;
+}
+
+nav{
+    z-index: 6000;
+    position: fixed;
+    top:0px;
+    left: 0px;
+    width:100%;
+    height:42px;
+    display:inline;
+}
+
+ul{
+  list-style-type: none;
+}
+
+nav ul{
+  width:100%;
+  list-style: none;
+  margin:0px;
+  padding:0px;
+}
+
+nav ul li{
+  background-color: #0b2347;
+  text-align: center;
+  width:100%;
+}
+
+nav ul li a{
+  padding:0.75em 0.1em;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+nav ul li:hover{
+  background-color: #2980B9;
+}
+
+main{
+  width:100%;
+}
+
+main p{
+  line-height: 2;
+  color: #000;
+  font-size: 1em;
+  margin:3em 2em;
+  color:white;
+  font-family: 'Varela Round', sans-serif;
+}
+
+article{
+  color:white;
+}
+
+section{
+  margin:0;
+}
+
+iframe{
+  float:left;
+  border:0;
+  width:95%;
+  height:350px;
+
+}
+
+form{
+  width:80%;
+}
+
+.icon{
+  font-size:2em;
+  float:right;
+  margin-top:-27px;
+}
+
+.burger li:not(:first-child) {
+  display: none;
+}
+
+.burger.responsive {
+  position: relative;
+}
+
+.burger.responsive a.icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.burgernav.responsive a {
+  float: none;
+  display: block;
+  text-align: left;
+}
+
+.sup-wrap{
+  padding-bottom:70px;
+}
+
+.none{
+  display:none;
+}
+
+
+.myButton{
+  margin-left: 8em; 
+}
+
+.formContainer{
+  float:left;
+  width:300px;
+  padding-top:9px;
+}
+.formContainer label{
+  width:60px;
+  float:left;
+}
+
+
+#burger{
+  overflow:hidden;
+}
+
+#Inicio1{
+  display:inline-block;
+  position:relative;
+  height:90vh;
+  bottom:22px;
+  background-image: url('Images/printer.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin:.3em;
+}
+
+section  img{
+  display:block;
+  width:90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding:1em 0;
+}
+
+
+#Contactanos {
+  color:white;
+  padding-left:10px;
+}
+
+
+#Acerca{
+  z-index:;
+  display:inline-block;
+  position:relative;
+  height:135vh;
+  bottom:22px;
+  background-image: url('Images/back.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin:1.7em;
+  padding:2em;
+  color:white;
+}
+
+#Soporte{
+  display:inline-block;
+  position:relative;
+  height:100vh;
+  width:68%;
+  background-image: url('Images/city.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin:1.7em;
+  padding:2em;
+
+  color:white;
+}
+
+
+
+
+@media (min-width:480px){
+
+  .active{
+  background-color: rgba(21, 67, 96, 0.9);
+  color: white;
+
+  }
+
+ /* nav ul{
+    clear:both;
+  */
+   nav ul li{
+   float:left;
+   width: 20%;
+  }
+  body{
+    margin-top:42px;
+  }
+  header{
+    width:100%;
+    display:inline;
+    color: white;
+    position:absolute;
+    padding-top:10px;
+  }
+
+
+  main{
+    max-width:920px;
+    margin: 1em auto;
+  }
+  nav{
+    position:fixed;
+    left: 0px;
+    width:100%;
+    height: 42px;
+  }
+
+
+  .icon {
+    display:none;
+  }
+  
+  .burger li:not(:first-child) {
+  display: inline-block;
+  }
+
+  .sup-wrap{
+  padding-bottom: 50px;
+  }
+
+
+  section  img{
+  display:block;
+  width:45%;
+  height:250px;
+  float:left;
+  margin:10px;
+  }
+
+
+
+
+
+
+
+  @media (min-width:720px){
+
+    section  img{
+    display:block;
+    width:28%;
+    height:250px;
+    float:left;
+    margin:10px 20px;
+    }
+
+
+    iframe{
+    float:left;
+    border:0;
+    width:60%;
+    height:600px;
+
+    }
+
+
+
+    .form-wrapper{
+      width:40%;
+      margin-right:30px;
+      float:left;
+    }
+    
+    #contCont{
+      width:40%;
+      position:relative;
+      bottom:35em;
+      left:35em;
+    }
+
+    #Soporte{
+      height:40vh;
+    }
+
+    #Inicio1{
+      position:relative;
+      height:70vh;
+      width:600px;
+      top:2em;
+      right:2em;
+    }
+
+    #pWrapper{
+      position:relative;
+      left:38em;
+    }
+
+    #Acerca{
+      height:70vh;
+    }
+
+  }
+}
