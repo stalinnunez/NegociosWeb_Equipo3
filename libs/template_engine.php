@@ -21,6 +21,7 @@
             $htmlContent = file_get_contents($viewsPath.$layoutFile);
             if(file_exists($viewsPath.$fileTemplate)){
                 $tmphtml = file_get_contents($viewsPath.$fileTemplate);
+                //echo($tmphtml);
                 $htmlContent = str_replace("{{{page_content}}}",
                             $tmphtml,
                             $htmlContent);

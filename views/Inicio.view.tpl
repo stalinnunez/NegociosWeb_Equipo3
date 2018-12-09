@@ -15,15 +15,6 @@
 	    <header>
 	      <h1 id="Inicio">A Beltran Copiadora S. de R.L</h1>
 	    </header>
-	    <nav> 
-          <ul id="burger" class="burger">
-            <li class="active link"><a href="Inicio.html">Inicio</a><a href="javascript:void(0);" class="icon" onclick="burgerMenu()">&#9776;</a></li>
-            <li class="link"><a href="Productos.html">Productos</a></li>
-            <li class="link"><a href="Contactanos.html">Contactanos</a></li>
-            <li class="link"><a href="Nosotros.html">Nosotros</a></li>
-            <li class="link"><a href="Soporte.html">Soporte</a></li>
-            </ul>
-        </nav>
     </div>
 
 	<main>
@@ -34,7 +25,7 @@
 
 	</main>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script type="text/Javascript" src="public/js/Base.js"></script> 
+	<script type="text/Javascript" src="C:\xampp\htdocs\Final\public\js\Base.js"></script> 
 
 
 </body>

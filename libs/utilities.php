@@ -61,8 +61,15 @@ $pageData=array();
             $global_context["css_ref"] = array(array("uri"=>$uri));
         }
     }
-    function addJsRef($uri, $first = true){
-
+    
+    function addJsRef($uri, $first = true)
+    {
+        global $global_context;
+        if (isset($global_context["js_ref"])) {
+            $global_context["js_ref"][] = array("uri"=>$uri);
+        } else {
+            $global_context["js_ref"] = array(array("uri"=>$uri));
+        }
     }
 
     function addSelectedCmbArray($arreglo,$atributo,$valor,$selAtributo="selected"){

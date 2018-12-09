@@ -148,13 +148,20 @@ form{
 
 #Inicio1{
   display:inline-block;
-  position:relative;
+  position: absolute;
   height:90vh;
   bottom:22px;
   background-image: url('../img/printer.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: white;
   margin:.3em;
+}
+
+.test{
+  background-color: red;
+  width: 100px;
+  height: 100px;
 }
 
 section  img{
@@ -173,7 +180,6 @@ section  img{
 
 
 #Acerca{
-  z-index:;
   display:inline-block;
   position:relative;
   height:135vh;
