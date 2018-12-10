@@ -1,6 +1,6 @@
 <?php
 
-    function renderizar($vista, $datos, $layoutFile = "layout.view.tpl"){
+    function renderizar($vista, $datos, $layoutFile = "loggedLayout.view.tpl"){
         if(!is_array($datos)){
             http_response_code(404);
             die("Error de renderizador: datos no es un arreglo");

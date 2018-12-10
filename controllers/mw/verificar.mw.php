@@ -24,9 +24,6 @@
     }
 
 
-    // IDEA:
-
-
     function llamarEstaLogueado()
     {
       $usuarioLogueado="";
@@ -43,7 +40,7 @@
         }
           return $usuarioLogueado;
     }
-    // IDEA:
+
 
     function mw_redirectToLogin($to){
         $loginstring = urlencode("?".$to);

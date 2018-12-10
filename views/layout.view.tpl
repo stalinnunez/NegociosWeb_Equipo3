@@ -21,6 +21,8 @@
             <li class="link"><a href="index.php?page=contactanos">Contactanos</a></li>
             <li class="link"><a href="index.php?page=nosotros">Nosotros</a></li>
             <li class="link"><a href="index.php?page=soporte">Soporte</a></li>
+            <li class="link"><a href="index.php?page=login">Iniciar Session</a></li>
+            <li class="link"><a href="index.php?page=crear">Crear cuenta</a></li>
             </ul>
         </nav>
     </div>

@@ -184,7 +184,7 @@ section  img{
   position:relative;
   height:135vh;
   bottom:22px;
-  /*background-image: url('Images/back.jpg');*/
+  background-image: url('../img/back.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   margin:1.7em;
@@ -197,7 +197,7 @@ section  img{
   position:relative;
   height:100vh;
   width:68%;
-  /*background-image: url('Images/city.jpg');*/
+  background-image: url('../img/city.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   margin:1.7em;
@@ -222,7 +222,7 @@ section  img{
   */
    nav ul li{
    float:left;
-   width: 20%;
+   width: 14%;
   }
   body{
     margin-top:42px;

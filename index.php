@@ -45,15 +45,13 @@ case "nosotros":
 case "soporte":
     include_once "controllers/soporte.control.php";
     die();
-case "logout":
-    include_once "controllers/security/logout.control.php";
+case "login":
+    include_once "controllers/login.control.php";
     die();
-case "dashboard":
-    include_once "controllers/dashboard.control.php";
+case "crear":
+    include_once "controllers/crear.control.php";
     die();
-case "layout":
-    include_once "controllers/layout.control.php";
-    die();
+
 }
 //Este switch se encarga de todo el enrutamiento que ocupa login
 /*$logged = mw_estaLogueado();
