@@ -5,5 +5,7 @@ CREATE TABLE `dbnegocios201803`.`productos` (
   `productodsc` VARCHAR(128) NULL,
   `productoest` CHAR(3) NULL,
   `productoimg` VARCHAR(128) NULL,
+  `productocant` int(4) NULL,
+  `productoprc` decimal NULL, 
   PRIMARY KEY (`productoid`),
   UNIQUE INDEX `productocod_UNIQUE` (`productocod` ASC));
