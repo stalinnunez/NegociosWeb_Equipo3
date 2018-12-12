@@ -8,17 +8,23 @@
         //die();
         die($conexion->connect_error);
    }
-   function obtenerRegistros(&$conexion, $sqlstr){
-       $resultado = array();
-       if($conexion){
-           $cursor = $conexion->query($sqlstr);
-           if($cursor){
-               foreach($cursor as $registro){
-                   $resultado[] = $registro;
-               }
-           }
-       }
-       return $resultado;
+   function obtenerRegistros($sqlstr, &$conexion = null){
+        if (!$conexion) {
+            global $conexion;
+        } 
+        $result = $conexion->query($sqlstr);
+        if ($conexion->connect_errno ) {
+            error_log($conexion->connect_error);
+        } 
+        $resultArray = array();
+
+        if (isset($result) && $result != '' ) {
+            foreach ($result as $registro ) {
+                $resultArray[] = $registro;
+            }
+            $result->free();
+        }
+        return $resultArray;
    }
 
    function obtenerRegistrosD($sqlstr, &$conexion = null){

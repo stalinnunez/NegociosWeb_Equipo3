@@ -51,7 +51,12 @@ case "login":
 case "crear":
     include_once "controllers/crear.control.php";
     die();
-
+case "Mantenimiento":
+    include_once "controllers/m_prods.control.php";
+    die();    
+case "Editar":
+    include_once "controllers/editar_productos.control.php";
+    die();
 }
 //Este switch se encarga de todo el enrutamiento que ocupa login
 /*$logged = mw_estaLogueado();
