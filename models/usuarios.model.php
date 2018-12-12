@@ -26,8 +26,12 @@
     if ($usuario_pswd !== $usuario_pswd_cnf) return 0;
     //validaciones
 
+    
     $usuario_fchIng = date('Y-m-d H:i:s');
     $usuario_pswd = md5(salt_password($usuario_fchIng,$usuario_pswd));
+
+    $temp_pswd = md5(salt_password($usuario_fchIng,$arrUserData["usuario_pswd"]));
+
 
     $sqlinsert= "INSERT INTO usuarios (`usuario_email`, `usuario_nombre`, `usuario_pswd`, `usuario_est`, `usuario_fchIng`, `usuario_exppwd`, `usuario_pwdfail`, `usuario_lstlgn`) VALUES ( '%s', '%s', '%s', 'ACT', '%s', NOW(), '0', NOW());";
     $sqlinsert = sprintf($sqlinsert,$usuario_email,$usuario_nombre,$usuario_pswd,$usuario_fchIng);
@@ -45,7 +49,6 @@
   function autenticarUsuario($arrUserData){
   $arrErrores = array();
   $errores="";
-    //obtener los datos del usuario
     $usuario_email = $arrUserData["usuario_email"];
     $usuario_pswd = $arrUserData["usuario_pswd"];
 
@@ -55,6 +58,7 @@
     if(count($usuario)){
       if ($usuario["usuario_est"] == "ACT"){
           $usuario_pswd_cnf = md5(salt_password($usuario["usuario_fchIng"], $usuario_pswd));
+          //redirectWithMessage("password ingresada ".$usuario["usuario_pswd"]." password real    l".$usuario_pswd."l","index.php?page=Inicio");
           if($usuario_pswd_cnf == $usuario["usuario_pswd"]){
               //actualizar fallos en 0, actualizar la fecha de ultimo login a hoy
               $sqlupdate = "update usuarios set usuario_pwdfail=0 , usuario_lstlgn='%s' where usuario_id = %d;";
@@ -100,7 +104,7 @@
   }
 
 
-    function usuarioExiste($email){
+  function usuarioExiste($email){
 
       $sqlstr="select usuario_email from usuarios where usuario_email "./*COLLATE utf8_bin */ "= '%s';";
       $sqlstr = sprintf($sqlstr,$email);
@@ -108,7 +112,7 @@
       $registros = obtenerRegistrosD($sqlstr);
       $resultado = count($registros);
       return $resultado;
-    }
+  }
 
 
   function obtenerUsuarios(){
@@ -116,6 +120,10 @@
     $sqlstr = "select * from usuarios;";
     $usuarios = obtenerRegistrosD($sqlstr);
     return $usuarios;
+  }
+
+  function ObtenerPassword(){
+    $sqlstr = "select usuario_pswd FROM usuarios where usuario_id =;";
   }
 
   ?>

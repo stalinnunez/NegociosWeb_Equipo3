@@ -1,15 +1,17 @@
 <?php
 //middleware de verificación
+require_once("libs/utilities.php");
 
 
     function mw_estaLogueado(){
         if( isset($_SESSION["userLogged"]) && $_SESSION["userLogged"] == true){
           addToContext("usuario_email", $_SESSION["userName"]);
-        
+          /*soloMensaje("eSTAS LOGEDO");*/
           return true;
         }else{
           $_SESSION["userLogged"] = false;
           $_SESSION["userName"] = "";
+          /*soloMensaje("NO ESTAS LOGEDO");*/
           return false;
         }
     }

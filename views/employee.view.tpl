@@ -17,10 +17,7 @@
 	    <nav> 
           <ul id="burger" class="burger">
             <li class="link"><a href="index.php?page=Inicio">Inicio</a><a href="javascript:void(0);" class="icon" onclick="burgerMenu()">&#9776;</a></li>
-            <li class="link"><a href="index.php?page=catalogo">Catalogo</a></li>
-            <li class="link"><a href="index.php?page=contactanos">Contactanos</a></li>
-            <li class="link"><a href="index.php?page=carrito">Carrito</a></li>
-            <li class="link"><a href="index.php?page=soporte">Soporte</a></li>
+            <li class="link"><a href="index.php?page=mantenimiento">Mantenimiento de Productos</a></li>
             <li class="link"><a href="index.php?page=logout">Cerrar Session</a></li>
             </ul>
         </nav>

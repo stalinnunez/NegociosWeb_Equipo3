@@ -18,7 +18,7 @@ $pageData=array();
         $global_context[$key] = $value;
     }
 
-    function redirectWithMessage($message, $url="index.php"){
+    function redirectWithMessage($message, $url="index.php?page=Inicio"){
       echo "<script>alert('$message'); window.location='$url';</script>";
       die();
     }

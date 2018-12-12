@@ -51,10 +51,39 @@ case "login":
 case "crear":
     include_once "controllers/crear.control.php";
     die();
+case "logout":
+    mw_setEstaLogueado("",false);
+    redirectWithMessage("Ha cerrado su sesion!");
+    //remove PHPSESSID from browser
+    if ( isset( $_COOKIE[session_name()] ) )
+    setcookie( session_name(), “”, time()-3600, “/” );
+    //clear session from globals
+    $_SESSION = array();
+    //clear session from disk
+    session_destroy();
+    die();
+case "mantenimiento":
+    if($global_context["usuario_email"]='admin@admin.com') {
+        include_once "controllers/mantenimiento.control.php";
+    }       
+    die();
+case "catalogo":
+    $logged = mw_estaLogueado();
+    if($logged){
+        include_once "controllers/catalogo.control.php";
+    }
+    die();
+case "carrito":
+    $logged = mw_estaLogueado();
+    if($logged){
+        include_once "controllers/carrito.control.php";
+    }
 
 }
+
+
 //Este switch se encarga de todo el enrutamiento que ocupa login
-/*$logged = mw_estaLogueado();
+/*
 if ($logged) {
     addToContext("layoutFile", "verified_layout");
     include_once 'controllers/mw/autorizar.mw.php';

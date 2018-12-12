@@ -23,11 +23,10 @@ style
 			<div class="card-body">
 				<form action="index.php?page=login" method="post">
 					<div class="input-group form-group">
-            	<input type="hidden" name="returnurl" value="{{returnurl}}"/>
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input type="email" name="usuario_email" value="{{usuario_email}}"   class="form-control" placeholder="Email">
+						<input type="password" name="usuario_email" value="{{usuario_email}}"   class="form-control" placeholder="Email">
 						
 					</div>
 					<div class="input-group form-group">
@@ -36,16 +35,19 @@ style
 						</div>
 						<input type="password" name="usuario_pswd" value="{{usuario_pswd}}" class="form-control" placeholder="password">
 					</div>
+					<div class="row align-items-center remember">
+						<input type="checkbox">Remember Me
+					</div>
 					<div class="form-group">
-						<button onclick="return submitLogin();" class="btn float-right login_btn">Iniciar Sesion</button>
+						<button onclick="return submitLogin();" class="btn float-right login_btn">"Iniciar Sesion</button>
 					</div>
 				</form>
-        <script>
-          function submitLogin(){
-            documents.forms[0].submit();
-            return false;
-          }
-        </script>
+                <script>
+                    function submitLogin(){
+                        documents.forms[0].submit();
+                        return false;
+                    }
+                </script>
 			</div>
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">

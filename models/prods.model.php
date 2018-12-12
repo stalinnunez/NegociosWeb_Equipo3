@@ -5,7 +5,7 @@
   function productos_obtenerTodos(){
     $sqlstr = "select * from productos;";
     $productos = array();
-    $productos = obtenerRegistros($sqlstr);
+    $productos = obtenerRegistros($conexion,$sqlstr);
     return $productos;
   }
   //Obtener Todos los Productos por Filtro
@@ -14,7 +14,7 @@
     $sqlstr = "select * from productos where productodsc like '%s';";
     $sqlstr = sprintf($sqlstr,$nombre."%");
     $productos = array();
-    $productos = obtenerRegistros($sqlstr);
+    $productos = obtenerRegistros($sqlstr); 
     return $productos;
   }
 
@@ -25,6 +25,24 @@
     $producto = obtenerUnRegistro($sqlstr);
     return $producto;
   }
+
+  function DisminuirExistenciaUno($codproducto){
+     $sqlstr = "Update productos set productocant = productocant-1 where productocod = %d";;
+     ejecutarNonQuery(sprintf($sqlstr,$codproducto));
+  }
+
+  function RestaurarExistencia($codproducto,$cantidad){
+     $sqlsrt = "Update productos set productocant = productocant+%d where productocod = %d;";
+     ejecutarNonQuery(sprintf($sqlsrt,$cantidad,$codproducto));
+  }
+
+   function ObtenerProdPrecio($codproducto){
+       $sqlsrt = "Select productoprc from productos where codproducto = %d";
+       $numLinea = obtenerRegistro($conexion,
+                    sprintf($sqlStr,$codproducto))["productoprc"];
+
+        return $numLinea;
+   }
 
   function productos_insert($cod,$nom, $barra){
     $sqlstr = "Insert into productos(productocod, productodsc, productobarra) value('%s','%s','%s');";
@@ -115,9 +133,7 @@
           );
     return ($result && true) ;
   }
-  function eliminarProducto(
-      $productocod
-  ) {
+  function eliminarProducto($productocod) {
           $sqldel = "DELETE FROM productos
           where  productocod = %d;";
           $result = ejecutarNonQuery(
