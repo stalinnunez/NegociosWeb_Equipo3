@@ -11,4 +11,3 @@
   PRIMARY KEY (`usuario_id`),
   UNIQUE KEY `usuario_name_UNIQUE` (`usuario_email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
-

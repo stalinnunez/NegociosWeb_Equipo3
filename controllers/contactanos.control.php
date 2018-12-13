@@ -3,7 +3,13 @@
   require_once("libs/template_engine.php");
 
   function run(){
-    renderizar("contactanos",Array());
+    if (mw_estaLogueado()){
+      renderizar("contactanos",array(),'loggedLayout.view.tpl');
+      }
+    
+    else{
+      renderizar("contactanos",array());
+    }
   }
   run();
 ?>

@@ -58,16 +58,12 @@
     if(count($usuario)){
       if ($usuario["usuario_est"] == "ACT"){
           $usuario_pswd_cnf = md5(salt_password($usuario["usuario_fchIng"], $usuario_pswd));
-          //redirectWithMessage("password ingresada ".$usuario["usuario_pswd"]." password real    l".$usuario_pswd."l","index.php?page=Inicio");
           if($usuario_pswd_cnf == $usuario["usuario_pswd"]){
-              //actualizar fallos en 0, actualizar la fecha de ultimo login a hoy
               $sqlupdate = "update usuarios set usuario_pwdfail=0 , usuario_lstlgn='%s' where usuario_id = %d;";
               $sqlupdate = sprintf($sqlupdate, date('Y-m-d H:i:s'), $usuario["usuario_id"]);
               ejecutarNonQuery($sqlupdate);
           }else{
-              //$arrErrores[] = "Credenciales no son Válidas.";
               $errores = "Credenciales no son Válidas.";
-              //actualizar el registro para aumentar los fallos
               $usuario_est = $usuario["usuario_est"];
               if($usuario["usuario_pwdfail"] >= 3){
                  $usuario_est = 'BLD';
@@ -79,17 +75,11 @@
               ejecutarNonQuery($sqlupdate);
           }
       }else{
-      //  $arrErrores[] = "Usuario no se encuentra Activo";
       $errores = "Usuario no se encuentra Activo";
       }
     }else{
-      //$arrErrores[] = "No se pudo encontrar el usuario.";
       $errores= "No se pudo encontrar el usuario.";
     }
-    //vamos a obetner el usuario con el correo
-    // estado, correo, contraseña encriptada, fecha ingreso, fallidos
-
-  //  return $arrErrores;
   return $errores;
   }
 

@@ -14,7 +14,7 @@
                 {{foreach productos}}
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card">
-                        <img class="card-img-top" src="{{productoimg}}" alt="Card image cap">
+                        <img class="card-img-top" src="{{productoimg}}" alt="Card image cap" height="400" width="200">
                         <div class="card-body">
                             <h4 class="card-title"><a href="product.html" title="View Product">{{productodsc}}</a></h4>
                             <p class="card-text">{{productocant}} Esta es la cantidad</p>

@@ -13,13 +13,13 @@
  * @link http://url.com
  */
 $server = "127.0.0.1";
-$user = "negocios";
-$pswd = "nw.user.2018";
+$user = "root";
+$pswd = "";
 $database = "dbnegocios201803";
 $port = "3306";
 
 
-/*
+
 $emailHost = 'email-smtp.us-west-2.amazonaws.com';
 $smtpUser = 'amazonwebuserkey';
 $smtpSecret = 'smtpscreteer';
@@ -29,5 +29,5 @@ $host_server = 'http://localhost/mvc/';
 if (isset($_SERVER["SERVER_MVC"])) {
     $host_server = $_SERVER["SERVER_MVC"];
 }
-*/
+
 ?>

@@ -15,7 +15,7 @@
  */
 session_start();
 require_once "libs/utilities.php";
-$pageRequest = "home";
+$pageRequest = "Inicio";
 if (isset($_GET["page"])) {
     $pageRequest = $_GET["page"];
 }
@@ -64,7 +64,7 @@ case "logout":
     die();
 case "mantenimiento":
     if($global_context["usuario_email"]='admin@admin.com') {
-        include_once "controllers/mantenimiento.control.php";
+        include_once "controllers/m_prods.control.php";
     }       
     die();
 case "catalogo":
@@ -78,7 +78,12 @@ case "carrito":
     if($logged){
         include_once "controllers/carrito.control.php";
     }
-
+case "Mantenimiento":
+    include_once "controllers/m_prods.control.php";
+    die();    
+case "Editar":
+    include_once "controllers/editar_productos.control.php";
+    die();
 }
 
 
